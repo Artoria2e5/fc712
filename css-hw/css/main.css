@@ -43,9 +43,13 @@ th, td {
   vertical-align: super;
   font-size: small;
 }
+div.flex {
+      display: flex;
+    flex-flow: row;
+}
 figure {
     display: flex;
-    flex-flow: row;
+    flex-flow: column;
     max-width: 250px;
     margin: auto;
 }
