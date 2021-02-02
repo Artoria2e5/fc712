@@ -1,0 +1,32 @@
+body {
+  font-family: sans-serif;
+  margin: 0 auto;
+  max-width: 50em;
+  padding: 0 1em;
+}
+@media print {
+  body {
+    max-width: none;
+    padding: 0;
+  }
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: serif;
+}
+table {
+  border-collapse: collapse;
+}
+th, td {
+  border: thin solid #a2a9b1;
+  padding: 0.2em 0.4em;
+}
+.here {
+  font-weight: bold;
+}
+.welsh {
+  background-color: PaleGreen;
+}
+.ref, .refuse {
+  vertical-align: super;
+  font-size: small;
+}
