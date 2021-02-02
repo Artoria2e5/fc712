@@ -4,6 +4,17 @@ body {
   max-width: 50em;
   padding: 0 1em;
 }
+nav {
+  display: inline-block;
+  border-bottom: 1px solid #66CCFF;
+}
+nav ol {
+  list-style-type: none;
+  padding-left: 0;
+}
+nav li {
+  display: inline-block;
+}
 @media print {
   body {
     max-width: none;
