@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<link rel="stylesheet" href="css/main.css">
+<title>stuff you can get away with on a webpage</title>
+<nav>
+    <ol>
+        <li><a class=here>webpage</a></li>
+        <li><a href="img.html">images</a></li>
+    </ol>
+</nav>
+<h1>stuff you can get away with on a webpage</h1>
+
+<h2>Keep it simple and stupid</h2>
+<p>It's actually good™️ to keep your page <em>as simple as possible</em>. It takes
+less work, and the product ends up better.
+
+<ul>
+<li>Using fancy colors make your page
+<a href="https://www.w3.org/TR/WCAG20/">less readable for people that happen to be
+not wearing glassess</a>. You can do fancy calculations, or you can just stick to
+the black and white.
+<li>Using non-semantic tags make your page harder to understand for people who
+depend on screen readers, since they might miss some point conveyed in your formatting.
+<li>Writing super long CSS and JavaScript make your page big and take longer to load.
+People get frustrated when they wait. Join the <a href="https://512kb.club/">512KB club</a>.
+<li>You also save printer ink. The stuff that is more expensive than oil, you know.
+</ul>
+
+<h2>Use the new stuff</h2>
+<h3>Magically zoomable images</h3>
+<p>Have you ever been <strong>frustrated</strong> by blurry illustrations? Do you want to live a life
+free of unreadble numbers in charts? Then use the very cool <a href=https://en.wikipedia.org/wiki/Scalable_Vector_Graphics>
+SVG format</a>, available since 2001!
+
+<p>Check out this stuff. Use your browser to zoom around. It's sooo smooth.</p>
+<!-- Taken from https://commons.wikimedia.org/wiki/File:SVG_example_markup_grid.svg.
+     I can't think of anything to draw. Maybe a circle? Well there is a circle here.-->
+<svg width="391" height="391" viewBox="-70.5 -70.5 391 391" xmlns="http://www.w3.org/2000/svg">
+<rect fill="#fff" stroke="#000" x="-70" y="-70" width="390" height="390"/>
+<g opacity="0.8">
+	<rect x="25" y="25" width="200" height="200" fill="green" stroke-width="4" stroke="pink" />
+	<circle cx="125" cy="125" r="75" fill="orange" />
+	<polyline points="50,150 50,200 200,200 200,100" stroke="red" stroke-width="4" fill="none" />
+	<line x1="50" y1="50" x2="200" y2="200" stroke="blue" stroke-width="4" />
+</g>
+</svg>
+
+<h2>Use the old stuff</h2>
+<h3>Omit some tags</h3>
+<p>Read the source code of this page. You might notice that there is no <code>&lt;head&gt;</code>
+and no <code>&lt;html&gt;</code>. You don't need them! And it's available since the very first
+edition of HTML in the 1980s!
+
+<p>Now check out this table. Have you ever wondered why HTML tables are so wordy? Well, they
+are actually not.<a class=ref id=ref_1_1 href="#ref_1">
+<table>
+<caption>Bri'ish place name parts and how to pronounce them</caption>
+<tr><th>Name <th>IPA<th>Comments
+<tr><td>-cester<td>/stə/<td>It's a castle!
+<tr class=welsh><td>Llanfairpwllgwyngyll<td>[ɬanˌvair puɬˈɡwɨ̞nɡɨ̞ɬ]<td>Welsh.
+<tr><td>Frome<td>/fru:m/<td>
+<tr><td>Something french<td>/'həʊn.hɔ:n/<td>No.
+</table>
+
+<h2>References</h2>
+<ol>
+<li id=ref_1><a href="#ref_1_1" class=refuse>1</a><a href=https://www.youtube.com/watch?v=uYNzqgU7na4>Why are British place names so hard to pronounce?</a> NO I AM NOT DOING APA FORMAT IN HANDTYPED HTML
+</ol>
