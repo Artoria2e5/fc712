@@ -41,3 +41,9 @@ th, td {
   vertical-align: super;
   font-size: small;
 }
+figure {
+    display: flex;
+    flex-flow: column;
+    max-width: 250px;
+    margin: auto;
+}
