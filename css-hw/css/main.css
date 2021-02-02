@@ -51,7 +51,7 @@ figure {
     display: flex;
     flex-flow: column;
     margin: auto;
-    max-width: 250px;
+    max-width: max(50%, 250px);
 }
 figure img {
     /* Why here too? Because Safari is crazy. */
