@@ -55,5 +55,5 @@ figure {
 }
 figure img {
     /* Why here too? Because Safari is crazy. */
-    max-width: 250px;
+    width: 220px;
 }
