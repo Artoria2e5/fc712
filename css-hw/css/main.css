@@ -3,7 +3,7 @@ body {
   margin: 0 auto;
   max-width: 50em;
   padding: 0 1em;
-  line-height: 1.4;
+  line-height: 1.2;
 }
 nav {
   display: inline-block;
@@ -24,6 +24,7 @@ nav li {
 }
 h1, h2, h3, h4, h5, h6 {
   font-family: Palatino, serif;
+  line-height: 1; 
 }
 table {
   border-collapse: collapse;
