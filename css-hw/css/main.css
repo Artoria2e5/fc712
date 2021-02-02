@@ -3,6 +3,7 @@ body {
   margin: 0 auto;
   max-width: 50em;
   padding: 0 1em;
+  line-spacing: 1.4;
 }
 nav {
   display: inline-block;
