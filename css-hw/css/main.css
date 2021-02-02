@@ -1,9 +1,9 @@
 body {
-  font-family: sans-serif;
+  font-family: Ubuntu, sans-serif;
   margin: 0 auto;
   max-width: 50em;
   padding: 0 1em;
-  line-spacing: 1.4;
+  line-height: 1.4;
 }
 nav {
   display: inline-block;
@@ -23,7 +23,7 @@ nav li {
   }
 }
 h1, h2, h3, h4, h5, h6 {
-  font-family: serif;
+  font-family: Palatino, serif;
 }
 table {
   border-collapse: collapse;
