@@ -43,7 +43,7 @@ th, td {
 }
 figure {
     display: flex;
-    flex-flow: column;
+    flex-flow: row;
     max-width: 250px;
     margin: auto;
 }
