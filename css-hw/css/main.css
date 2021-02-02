@@ -51,7 +51,7 @@ figure {
     display: flex;
     flex-flow: column;
     margin: auto;
-    max-width: max(50%, 250px);
+    max-width: 250px;
     padding: 10px;
 }
 figure img {
