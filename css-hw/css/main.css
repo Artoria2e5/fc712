@@ -50,6 +50,9 @@ div.flex {
 figure {
     display: flex;
     flex-flow: column;
-    max-width: 250px;
     margin: auto;
+}
+figure img {
+    /* Why here too? Because Safari is crazy. */
+    max-width: 250px;
 }
