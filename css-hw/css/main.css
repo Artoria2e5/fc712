@@ -23,7 +23,8 @@ nav li {
   }
 }
 h1, h2, h3, h4, h5, h6 {
-  font-family: Palatino, serif;
+  /* I could write a long list of Palatino clone names. Or I can trust people who use clones to have a functioning fontconfig. */
+  font-family: 'Palatino Linotype', Palatino, serif;
   line-height: 1; 
 }
 table {
