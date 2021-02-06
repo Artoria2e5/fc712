@@ -58,3 +58,9 @@ figure img {
     /* Why here too? Because Safari is crazy. */
     width: 220px;
 }
+tr.train > :nth-child(1) {
+  background: #55cdfc;
+}
+tr.train > :nth-child(2) {
+  background: #f7a8b8;
+}
