@@ -123,7 +123,7 @@ def create_ngon_differently(x0: num, y0: num, n: num, l: num, **kw):
 
 create_ngon_differently(100, 100, 3, 40, fill="pink")
 
-# task 7a
+# task 9a
 def make_a_golden_spiral(x0: num, y0: num, n: num, a: num, dt: num, **kw) -> List[int]:
     ret = []
     golden_ratio = (1 + math.sqrt(5)) / 2
@@ -139,7 +139,7 @@ def make_a_golden_spiral(x0: num, y0: num, n: num, a: num, dt: num, **kw) -> Lis
 
 make_a_golden_spiral(100, 100, 20, 1, math.pi / 12, fill="#808080")
 
-# task 7b
+# task 9b
 def create_nstar(
     x1: num, y1: num, x2: num, y2: num, n: int, delta: float = 0.0, **kw
 ) -> List[int]:
