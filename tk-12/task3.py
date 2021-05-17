@@ -27,7 +27,7 @@ textEntry = tkinter.Entry(top, textvariable=textVar, width=12)
 textEntry.grid(row=0, column=0, columnspan=2)
 
 messageLabel = tkinter.Label(
-    top, text="", width=24, justify=tkinter.LEFT, anchor=tkinter.NW
+    top, text="", width=18, justify=tkinter.LEFT, anchor=tkinter.NW
 )
 messageLabel.grid(row=0, column=2, columnspan=2)
 
@@ -46,11 +46,11 @@ to_currency = tkinter.StringVar(top, "USD")
 CURRENCIES = CURRENCY_RATIOS.keys()
 for k, v in enumerate(CURRENCIES):
     in_button = tkinter.Radiobutton(
-        top, text=v, value=v, variable=from_currency, command=convert, width=6
+        top, text=v, value=v, variable=from_currency, command=convert, width=7
     )
     in_button.grid(row=1, column=1 + k)
     out_button = tkinter.Radiobutton(
-        top, text=v, value=v, variable=to_currency, command=convert, width=6
+        top, text=v, value=v, variable=to_currency, command=convert, width=7
     )
     out_button.grid(row=2, column=1 + k)
 
