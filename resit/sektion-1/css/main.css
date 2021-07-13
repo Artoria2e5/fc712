@@ -1,0 +1,117 @@
+/* Everyone uses widescreen. Make the text not so wide. */
+body {
+  font-family: Ubuntu, sans-serif;
+  margin: 0 auto;
+  max-width: 50em;
+  padding: 0 1em;
+  /* And not so cramped. */
+  line-height: 1.2;
+}
+/* This removes the big blanks from print. Paper is narrow enough. */
+@media print {
+  body {
+    max-width: none;
+    padding: 0;
+  }
+}
+
+/* The navigation thing on top. */
+nav {
+  display: inline-block;
+  border-bottom: 1px solid #66ccff;
+}
+nav ol {
+  /* This makes it bullet-less! */
+  list-style-type: none;
+  padding-left: 0;
+}
+nav li {
+  /* And this makes it go horizontal. */
+  display: inline-block;
+}
+
+/* I like headings in Serif. Wikipedia influence. */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  /* I could write a long list of Palatino clone names. Or I can trust people who use clones to have a functioning fontconfig. */
+  font-family: "Palatino Linotype", Palatino, serif;
+  line-height: 1;
+}
+
+/* You would wonder why this isn't default. */
+table {
+  border-collapse: collapse;
+}
+th,
+td {
+  border: thin solid #a2a9b1;
+  padding: 0.2em 0.4em;
+}
+.here {
+  font-weight: bold;
+}
+.welsh,
+.yes {
+  background-color: PaleGreen;
+}
+tr.train > :nth-child(1) {
+  background: #55cdfc;
+}
+tr.train > :nth-child(2),
+.no {
+  background: #f7a8b8;
+}
+
+/* Superscript for refs. */
+.ref,
+.refuse {
+  vertical-align: super;
+  font-size: small;
+}
+
+/* Flex box. Unused. */
+div.flex {
+  display: flex;
+  flex-flow: row;
+}
+
+/* Picture boxes. */
+figure {
+  /* This flex is also unused. */
+  display: flex;
+  flex-flow: column;
+  margin: auto;
+  max-width: 250px;
+  padding: 10px;
+}
+figure > img {
+  /* Why here too? Because Safari is crazy. */
+  width: 220px;
+  margin: 0 auto;
+}
+figure.large {
+  max-width: 500px;
+}
+figure.large > img {
+  width: 440px;
+}
+
+/* Handy block elements. */
+.right {
+  float: right;
+  margin: 1em;
+}
+.box {
+  background: #ccc;
+  border: black;
+}
+aside {
+  border-left: green solid 14px;
+  background: #ddffdd;
+  margin: 1.5em 0;
+  padding: 0.5em 1em;
+}

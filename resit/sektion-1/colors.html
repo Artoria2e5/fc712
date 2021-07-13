@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+<link rel="stylesheet" href="css/main.css">
+<title>colo[u]r stuff</title>
+<nav>
+    <ol>
+        <li><a href="index.html">webpage</a></li>
+        <li><a class=here>colours</a></li>
+    </ol>
+</nav>
+
+<h1>Colours! They are easy, right?</h1>
+<p>Computer colours are not easy at all.</p>
+
+<h2>RGB operations are weird.</h2>
+<p>I apologise for any damage to your eyes. Here is a gradient from Wikipedia:</p>
+
+<figure class=large>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/20151204-IMG_2634BlauGelb.jpg/1600px-20151204-IMG_2634BlauGelb.jpg">
+</figure>
+
+<p>Okay, why is the part in the middle darker than either end of the gradient?</p>
+
+<div text-align="center"><strong>Gamma encoding.</strong></div>
+
+<p>Gamma encoding is a good thing because human light perception is logarithmic, although
+    it was created mainly because the physics of cathode ray tubes. It does work on human eyes though!
+
+<p>The issue occurs when you blend gamma-encoded coluors, however. You get a blend completely
+   unseen in nature, but not quite matching human perception either because the main
+   "analysis" of colour in our brains is not in RGB, but in lightness-chroma (L-a-b, or as
+   neurologists insist, A-a-b).
+
+
+<figure class="right box">
+<img src="https://bottosson.github.io/img/colorwrong/greenmagenta.png"/>
+
+<figcaption>This image from the great <a href="https://bottosson.github.io/posts/colorwrong/">Björn Ottosson</a>,
+   who came up with a nice approximation of that "analysis", illustrates the types of blending in more detail.</figcaption>
+</figure>
+
+<p>Does making everything in linear RGB solve this problem? As we can see with the Björn picture, no! Gamma-encoded RGB
+   operations, when it does not fail super obviously, actually gives a nice blend that is approximately
+   linear on the lightness and saturation scales. That's why you see all the dodge, burn, whatever...
+   operations still being available in Photoshop these days. (Invert is still weird though.)
+
+<p>I supposed you could put it in a Lch color space to do the blend with these characteristics being actually guaranteed,
+   but I am clearly unable to go ahead with that commitment.
+
+<aside>Does this read like the Wikipedia page on color gradients? That's because I wrote the parts about gamma.</aside>
+
+<h2>Burn HSL with fire.</h2>
+<p>That said, one use of gamma-encoded RGB is seriously awful: HSL and buddies like HSV. I simply cannot overstate how
+   many people get a misguided notion of a "hue" from this system, and how many souls have been crushed by the HSL rainbow
+   of WordArt.
+
+<p>I should put an image here. But I suppose one with <code>float:right</code> is good enough for demonstrating CSS skills
+   and I am too tired. Just observe the <a href="https://en.wikipedia.org/wiki/Hue">Wikipedia article on Hue</a>: we have a mixture of good hues
+   (which I added) and bad HSL hues going on, and I did think about writing some Python to replace the bird gif with a
+   proper Oklch Hue shift. I have too many TODOs and I really don't want to be reminded of them. I am a crybaby.
+
+<h2>Other colourful things I thought of doing</h2>
+<ul>
+   <li>Add footnotes from <code>index.html</code> to this page, which is actually citing more things. Too tired.
+   <li>Figure out whether we can get away with
+      <a href="https://en.wikipedia.org/wiki/CIE_1931_color_space#Similar_color_spaces">reinterpreting CIE XYZ coordinates in CIE XYZ<sub>F</sub></a>.
+      My sanity says a LMS step is necessary, but I want to try and see colours get subtlely distorted.
+   <li>In the vein of the thing above, approximate CIE XYZ<sub>F</sub> in a way similar to
+      <a href="http://jcgt.org/published/0002/02/01/">Wyman et al., 2013</a> and put it on arXiv. For fun. And also the other XYZ variants.
+</ul>
