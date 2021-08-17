@@ -1,0 +1,82 @@
+{% extends "bootstrap/base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+<!-- The radio button thing from flask_bootstrap is not good at all. So we are going to write our own macro! Sounds fun, right? :( -->
+{% macro radio_field(field) %}
+<tr>
+    <td><label class="form-check-label">
+            {{field.label.text|safe}}
+        </label></td>
+    <td>
+        {% for item in field -%}
+        <div class="form-check form-check-inline">
+            <label class="form-check-label">
+                {{item(class_="form-check-input")|safe}} {{item.label.text|safe}}
+            </label>
+        </div>
+        {% endfor %}
+    </td>
+</tr>
+{% endmacro %}
+
+<!-- Show the invalid feedback. Who decided it should be hidden? -->
+{%- block styles %}
+{{ super() }}
+<style>
+.invalid-feedback, .invalid-tooltip {
+  /* This is a very important CSS crime. */
+  display: initial !important;
+}
+</style>
+{%- endblock styles %}
+
+<!-- So we really only need to substitute the content block. Template inheritance is magic! -->
+{% block content %}
+<div class="container">
+    <h3 class="pt-5 pb-2">GIC Course Self-Assessment Form</h3>
+    <form class="form form-horizontal" method="post" role="form">
+        <!-- This used to be called form.hidden_field() -->
+        {{ form.csrf }}
+        {{ wtf.form_errors(form, hiddens='only') }}
+
+        <!-- quick_form is *very* nice, but I want a custom layout for the identifing info. In addition, I want to add roles so they auto-fill. -->
+        <div class="row">
+            <div class="form-group col-md-6">
+                {{ wtf.form_field(form.fullname, class='form-control')}}
+            </div>
+            <div class="form-group col-md-6">
+                {{ wtf.form_field(form.id, class='form-control') }}
+            </div>
+        </div>
+        {{wtf.form_field(form.email, type='email')}}
+        <hr>
+        {{wtf.form_field(form.course_id)}}
+        <p>
+            For the following question, rate your agreement with the statement from 1 (strongly disagree) to 5 (strongly agree),
+            or use 0 for don't know.
+        </p>
+        <table class="table">
+            {{radio_field(form.self_assessment)}}
+        </table>
+        {{wtf.form_field(form.more_details)}}
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+{% endblock %}
+
+<!-- Extend the scripts part to alert() the flashes. -->
+{% block scripts %}
+{{super()}}
+{% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+        {% for message in messages %}
+            <!-- This is not clean, but for all the possible strings we could have we should be fine. -->
+            <!-- Wait. They might put a ` in their name.... fine I will add a replace. -->
+            <!-- I am going to hell for this code. -->
+            <script>
+                alert(`{{ message[1].replace('`', '\\`') }}`)
+            </script>
+        {% endfor %}
+    {% endif %}
+{% endwith %}
+{% endblock %}
