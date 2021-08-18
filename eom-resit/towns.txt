@@ -1,0 +1,5 @@
+Small Town, 2500
+Bigger Town, 7570
+Large Town, 14250
+Loch Ness, 1
+Jurassic Park, 50
